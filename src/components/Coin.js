@@ -1,8 +1,15 @@
 import React from 'react'
 
-const Coin = () => {
+const Coin = ({name,image,symple,price,marketCap,priceChange}) => {
   return (
-    <div>Coin</div>
+    <div>
+        <img src={image} alt={'icon'+name}/>
+        <span>{name}</span>
+        <span>{symple.toUpperCase()}</span>
+        <span>{price.toLocaleString()}</span>
+        <span>{priceChange}</span>
+        <span>{marketCap.toLocaleString()}</span>
+    </div>
   )
 }
 

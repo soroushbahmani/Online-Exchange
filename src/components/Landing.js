@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 //api
 import { getCoin } from '../services/api'
-import Loader from './Loader';
+import Coin from './Coin';
 //loading
+import Loader from './Loader';
+//components
 
 const Landing = () => {
 
@@ -22,11 +24,19 @@ const Landing = () => {
         <>
             <input type='text' placeholder='search' />
             <div>
-            
+
                 {
-                    coins.length?
-                    coins.map(item =>  <p key={item.id}>{item.name}</p>):
-                    <Loader/>
+                    coins.length ?
+                        coins.map(item => <Coin
+                            key={item.id}
+                            name={item.name}
+                            image={item.image}
+                            symple={item.symbol}
+                            price={item.current_price}
+                            marketCap={item.market_cap}
+                            priceChange={item.price_change_percentage_24h}
+                        />) :
+                        <Loader />
                 }
             </div>
         </>
