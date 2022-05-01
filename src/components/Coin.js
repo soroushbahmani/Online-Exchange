@@ -1,14 +1,15 @@
 import React from 'react'
-
+//css
+import style from './coin.module.css'
 const Coin = ({name,image,symple,price,marketCap,priceChange}) => {
   return (
-    <div>
-        <img src={image} alt={'icon'+name}/>
-        <span>{name}</span>
-        <span>{symple.toUpperCase()}</span>
-        <span>{price.toLocaleString()}</span>
-        <span>{priceChange}</span>
-        <span>{marketCap.toLocaleString()}</span>
+    <div className={style.continer}>
+        <img className={style.image} src={image} alt={'icon'+name}/>
+        <span className={style.name}>{name}</span>
+        <span className={style.symple}>{symple.toUpperCase()}</span>
+        <span className={style.currentPrice}>{price.toLocaleString()}</span>
+        <span className={priceChange > 0 ? style.greenPrice : style.redPrice}>{priceChange}</span>
+        <span className={style.marketCap}>{marketCap.toLocaleString()}</span>
     </div>
   )
 }
