@@ -7,7 +7,7 @@ const Loader = ({ type }) => {
         <div>
             {
                 type == 'loading' ?
-                <div>
+                <div style={{marginTop:'50px'}}>
                     <img src={spinner} alt='loading' />
                     <h1>loading...</h1>
                 </div>
