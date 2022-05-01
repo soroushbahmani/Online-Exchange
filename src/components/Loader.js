@@ -1,10 +1,13 @@
 import React from 'react'
 //gif
-import '../gif/loader.gif'
+import spinner from '../gif/loader.gif'
 
 const Loader = () => {
     return (
-        <div>Loader</div>
+        <div>
+            <img src={spinner} alt='loading'/>
+            <h1>loading</h1>
+        </div>
     )
 }
 
