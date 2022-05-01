@@ -5,6 +5,8 @@ import Coin from './Coin';
 //loading
 import Loader from './Loader';
 //components
+//css
+import style from './landing.module.css'
 
 const Landing = () => {
 
@@ -26,8 +28,8 @@ const Landing = () => {
 
     return (
         <>
-            <input type='text' placeholder='search' value={search} onChange={searchHandler} />
-            <div>
+            <input className={style.input} type='text' placeholder='search' value={search} onChange={searchHandler} />
+            <div className={style.coinContainer}>
 
                 {
                     coins.length ?
