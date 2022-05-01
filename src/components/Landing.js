@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react'
+//api
 import { getCoin } from '../services/api'
+import Loader from './Loader';
+//loading
 
 const Landing = () => {
 
@@ -22,6 +25,7 @@ const Landing = () => {
                 {
                     coins.map(item =>  <p key={item.id}>{item.name}</p>)
                 }
+                <Loader/>
             </div>
         </>
     )
