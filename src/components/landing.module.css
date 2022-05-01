@@ -1,27 +1,58 @@
-.coinContainer{
+.coinContainer {
     margin: 50px auto;
     border: 1px solid silver;
     width: fit-content;
     border-radius: 10px;
     background-color: #f6f6f6;
 }
-.input1{
-width: 300px;
-margin-top: 50px;
-border: 1px solid silver;
-border-radius: 5px;
-height: 20px;
-padding: 5px;
-background-color: #f6f6f6;
-transition: all 0.2 ease;
-box-shadow: rgba(26, 26, 26, 0.2) 0 3px 8px;
+
+
+
+.input1 {
+    width: 300px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    height: 20px;
+    padding: 5px;
+    background-color: #f6f6f6;
+    transition: all 0.2 ease;
+    box-shadow: rgba(26, 26, 26, 0.2) 0 3px 8px;
 
 }
 
-.input1:focus{
+.select:focus,.input1:focus {
     outline: none !important;
 
     border-color: white !important;
     background-color: white !important;
     box-shadow: rgba(74, 74, 74, 0.2) 0 3px 8px;
+}
+.select,.input0{
+margin:10px 0 20px 0;
+width:125px;
+border: 1px solid silver;
+/* border-radius: 5px; */
+height: 30px;
+/* padding: 5px; */
+background-color: #f6f6f6;
+transition: all 0.2 ease;
+box-shadow: rgba(26, 26, 26, 0.2) 0 3px 8px;
+}
+
+.lable{
+    margin-bottom: 10px;
+    text-align: left;
+}
+.topInputs{
+    margin-top: 50px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.topInputs div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
