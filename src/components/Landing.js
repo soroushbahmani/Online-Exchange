@@ -1,19 +1,30 @@
-import React , {useEffect , useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import { getCoin } from '../services/api'
 
-const Landing =()=> {
+const Landing = () => {
 
-    useEffect(()=>{
+    const [coins, setCoin] = useState([]);
+
+    useEffect(() => {
         const fetchApi = async () => {
             const data = await getCoin();
-            console.log(data);
+            setCoin(data)
         }
         fetchApi()
-    },[])
+    }, [])
 
-  return (
-    <div>Landing</div>
-  )
+
+
+    return (
+        <>
+            <input type='text' placeholder='search' />
+            <div>
+                {
+                    coins.map(item =>  <p key={item.id}>{item.name}</p>)
+                }
+            </div>
+        </>
+    )
 }
 
 export default Landing
