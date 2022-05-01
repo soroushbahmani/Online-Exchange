@@ -28,23 +28,33 @@ const Landing = () => {
 
     return (
         <>
-            <input className={style.input} type='text' placeholder='search' value={search} onChange={searchHandler} />
-            <div className={style.coinContainer}>
+            <input className={style.input1} type='text' placeholder='search' value={search} onChange={searchHandler} />
 
                 {
                     coins.length ?
-                    searchCoins.map(item => <Coin
-                            key={item.id}
-                            name={item.name}
-                            image={item.image}
-                            symple={item.symbol}
-                            price={item.current_price}
-                            marketCap={item.market_cap}
-                            priceChange={item.price_change_percentage_24h}
-                        />) :
-                        <Loader />
+                        <div className={style.coinContainer}>
+                            {
+                                searchCoins.map(item => <Coin
+                                    key={item.id}
+                                    name={item.name}
+                                    image={item.image}
+                                    symple={item.symbol}
+                                    price={item.current_price}
+                                    marketCap={item.market_cap}
+                                    priceChange={item.price_change_percentage_24h}
+                                />)
+                            }
+
+
+                        </div> :
+                        <Loader type={'loading'}/>
                 }
-            </div>
+                {
+                    search.length ? 
+                    <Loader type={'not'}/>:
+                    ''
+                }
+
         </>
     )
 }
