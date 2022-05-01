@@ -22,10 +22,12 @@ const Landing = () => {
         <>
             <input type='text' placeholder='search' />
             <div>
+            
                 {
-                    coins.map(item =>  <p key={item.id}>{item.name}</p>)
+                    coins.length?
+                    coins.map(item =>  <p key={item.id}>{item.name}</p>):
+                    <Loader/>
                 }
-                <Loader/>
             </div>
         </>
     )
