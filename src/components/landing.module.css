@@ -5,7 +5,7 @@
     border-radius: 10px;
     background-color: #f6f6f6;
 }
-.input{
+.input1{
 width: 300px;
 margin-top: 50px;
 border: 1px solid silver;
@@ -14,11 +14,14 @@ height: 20px;
 padding: 5px;
 background-color: #f6f6f6;
 transition: all 0.2 ease;
+box-shadow: rgba(26, 26, 26, 0.2) 0 3px 8px;
+
 }
 
-.input.focus{
-    outline: none;
-    border-color: white;
-    background-color: white;
+.input1:focus{
+    outline: none !important;
+
+    border-color: white !important;
+    background-color: white !important;
     box-shadow: rgba(74, 74, 74, 0.2) 0 3px 8px;
 }
